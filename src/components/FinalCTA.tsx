@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Phone, Mail, ArrowUpRight } from "lucide-react";
+import joePortrait from "../../public/images/joe-velasco.jpg";
 
 interface FinalCTAProps {
   onOpenContact: () => void;
@@ -27,7 +28,7 @@ export default function FinalCTA({ onOpenContact }: FinalCTAProps) {
         {/* Subtle Joe Portrait Avatar */}
         <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white/20 mb-6 shadow-2xl">
           <Image
-            src="/images/joe-velasco.jpg"
+            src={joePortrait}
             alt="Joe Velasco"
             fill
             sizes="80px"

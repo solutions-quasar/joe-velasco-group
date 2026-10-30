@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { X, Send, CheckCircle2, Phone, Mail, Shield } from "lucide-react";
+import joePortrait from "../../public/images/joe-velasco.jpg";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -75,7 +76,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         <div className="mb-8 flex items-start space-x-4">
           <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 shrink-0 mt-1">
             <Image
-              src="/images/joe-velasco.jpg"
+              src={joePortrait}
               alt="Joe Velasco"
               fill
               className="object-cover object-top"

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight, Award, ShieldCheck } from "lucide-react";
+import joePortrait from "../../public/images/joe-velasco.jpg";
 
 interface JoeIntroProps {
   onOpenContact: () => void;
@@ -18,7 +19,7 @@ export default function JoeIntro({ onOpenContact }: JoeIntroProps) {
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-[340px] sm:max-w-[420px] lg:max-w-none aspect-[4/5] overflow-hidden bg-neutral-900 border border-[#2a2a2a] shadow-2xl">
               <Image
-                src="/images/joe-velasco.jpg"
+                src={joePortrait}
                 alt="Joe Velasco — Silicon Valley Luxury Real Estate Specialist"
                 fill
                 priority
