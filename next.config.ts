@@ -1,27 +1,17 @@
 import type { NextConfig } from "next";
 
+const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: isGithubActions ? "/joe-velasco-group" : "",
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "media-production.lp-cdn.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.cbhomes.com",
-      },
-      {
-        protocol: "https",
-        hostname: "joevelascogroup.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.joevelascogroup.com",
       },
     ],
   },
